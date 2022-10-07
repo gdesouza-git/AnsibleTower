@@ -3,8 +3,7 @@
   hosts: all
   vars:
     ansible_remote_tmp: /tmp
- 
   tasks:
- 
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+    - name: Exibir mensagem
+      debug:
+        msg: Funcionando
