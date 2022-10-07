@@ -1,0 +1,19 @@
+- name: Instalar Apache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Upgrade de pacotes
+      apt:
+        name: "*"
+        state: latest 
+    - name: Instalar ultima versão do Apache
+      apt:
+        name: apache2
+        update_cache: yes
+        state: present
+    - name: Iniciar httpd
+      service:
+        name: apache2
+        state: started
+        enabled: true
+        force: yes
