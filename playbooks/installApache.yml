@@ -1,6 +1,8 @@
 - name: Instalar Apache
   hosts: all
   become: yes
+  vars:
+    ansible_remote_tmp: /tmp
   tasks:
     - name: Upgrade de pacotes
       apt:
