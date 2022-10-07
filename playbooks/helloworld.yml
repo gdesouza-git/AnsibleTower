@@ -1,6 +1,8 @@
 ---
 - name: Hello World!
   hosts: all
+  vars:
+    ansible_remote_tmp: /tmp
  
   tasks:
  
